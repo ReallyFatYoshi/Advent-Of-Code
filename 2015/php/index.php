@@ -1,20 +1,28 @@
 <?php
 
 use Knight\AdventOfCode\DayOne;
+use Knight\AdventOfCode\DayThree;
 use Knight\AdventOfCode\DayTwo;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $dayOne = new DayOne('dayOne/input.txt');
 $value = $dayOne->getFloor();
-echo "--- Day One ---" . PHP_EOL;
-echo "Floor: " . $value . PHP_EOL;
+logger('--- Day One ---', 'green');
+logger('Floor: ' . $value);
 $value = $dayOne->getPosition(-1);
-echo "First position in basement: " . $value . PHP_EOL;
+logger('First position in basement: ' . $value);
 
-echo "--- Day Two ---" . PHP_EOL;
+logger('--- Day Two ---', 'green');
 $dayTwo = new DayTwo('dayTwo/input.txt');
 $value = $dayTwo->wrappingPaperSquared();
-echo "Square Feet: " . $value . PHP_EOL;
+logger('Square Feet: ' . $value);
 $value = $dayTwo->amountOfRibbon();
-echo "Amount of ribbon: " . $value . PHP_EOL;
+logger('Amount of ribbon: ' . $value);
+
+logger('--- Day Three ---', 'green');
+$dayTwo = new DayThree('dayThree/input.txt');
+$value = $dayTwo->visitedHouse();
+logger('Visited Houses: ' . $value);
+$value = $dayTwo->robot();
+logger('Santa with Robot: ' . $value);
