@@ -1,0 +1,28 @@
+{
+    "name": "knight/advent-of-code",
+    "description": "Advent Of Code 2015",
+    "type": "project",
+    "license": "MIT",
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "start": "php index.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "Knight\\AdventOfCode\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "ReallyFatYoshi",
+            "email": "contact.reallyfatyoshi@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    }
+}
