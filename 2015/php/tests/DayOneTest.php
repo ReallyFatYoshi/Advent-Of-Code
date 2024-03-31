@@ -14,7 +14,7 @@ final class DayOneTest extends TestCase
     public function testResolveFloor(): void
     {
         $dayOne = new DayOne('dayOne/test.txt');
-        $value = $dayOne->resolve();
+        $value = $dayOne->getFloor();
 
         $this->assertSame(0, $value);
     }
@@ -22,7 +22,7 @@ final class DayOneTest extends TestCase
     public function testResolvePosition(): void
     {
         $dayOne = new DayOne('dayOne/test.txt');
-        $value = $dayOne->resolvePosition(2);
+        $value = $dayOne->getPosition(2);
         $this->assertSame(2, $value);
     }
 }

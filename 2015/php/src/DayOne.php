@@ -27,7 +27,7 @@ final class DayOne
      *
      * @return int
      */
-    public function resolve(): int
+    public function getFloor(): int
     {
         $count = 0;
         for ($i = 0; $i < strlen($this->contents); $i++) { 
@@ -44,7 +44,7 @@ final class DayOne
      *
      * @return int
      */
-    public function resolvePosition(int $floor): int
+    public function getPosition(int $floor): int
     {
         $count = 0;
         for ($i = 0; $i < strlen($this->contents); $i++) { 

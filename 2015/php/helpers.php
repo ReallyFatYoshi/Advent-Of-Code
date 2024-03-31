@@ -4,9 +4,10 @@
  * Grabs and returns the contents of a file.
  *
  * @param  mixed $fileName
- * @return string
+ * @return string|array
  */
-function contents(string $fileName): string 
+function contents(string $fileName): string|array
 {
-    return file_get_contents(__DIR__ . '/resources/' . $fileName);
+    $lines = file(__DIR__ . '/resources/' . $fileName);
+    return count($lines) == 1 ? reset($lines) : $lines;
 }
